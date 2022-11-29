@@ -1,0 +1,85 @@
+@font-face {
+    font-family: SourceSansPro;
+    src: url(assets/SourceSansPro-Regular.ttf.woff2);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    padding: 0 7%;
+    background-color: #000;
+    font-family: "SourceSansPro", serif;
+    color: #fff;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+    height: 100vh;
+}
+main img {
+    width: 100%;
+    height: 100%;
+}
+.container {
+    position: relative;
+    transition-duration: 0.25s; 
+}
+.bottom-left-text {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 7%;
+    right: 7%;
+    background-color: rgb(32, 32, 32);
+    font-size: 75%;
+}
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 1%;
+}
+.container:hover {
+    transform: scale(1.025);
+    z-index: 3;
+    border-radius: 10%;
+}
+.container:hover img {
+    border-radius: 7px;
+}
+
+@media only screen and (max-width: 850px) {
+    main {
+        grid-template-columns: 1fr 1fr;
+    }
+    body {
+        padding: 0;
+    }
+    footer {
+        left: 0;
+        right: 0;
+    }
+}
+@media only screen and (max-width: 550px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+    body {
+        padding: 0;
+    }
+    footer {
+        left: 0;
+        right: 0;
+    }
+    .footer-container {
+        flex-wrap: wrap;
+    }
+}

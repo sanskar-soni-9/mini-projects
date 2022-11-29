@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="640" height="480" viewBox="0 0 640 480" xml:space="preserve">
+<desc>Created with Fabric.js 3.6.3</desc>
+<defs>
+</defs>
+<g transform="matrix(1 0 0 1 316.99 231.99)" id="Capa_1"  >
+<path style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(152,152,152); fill-rule: nonzero; opacity: 1;"  transform=" translate(-208.49, -208.49)" d="M 356.004 61.156 c -81.37 -81.47 -213.377 -81.551 -294.848 -0.182 c -81.47 81.371 -81.552 213.379 -0.181 294.85 c 81.369 81.47 213.378 81.551 294.849 0.181 C 437.293 274.636 437.375 142.626 356.004 61.156 z M 237.6 340.786 c 0 3.217 -2.607 5.822 -5.822 5.822 h -46.576 c -3.215 0 -5.822 -2.605 -5.822 -5.822 V 167.885 c 0 -3.217 2.607 -5.822 5.822 -5.822 h 46.576 c 3.215 0 5.822 2.604 5.822 5.822 V 340.786 z M 208.49 137.901 c -18.618 0 -33.766 -15.146 -33.766 -33.765 c 0 -18.617 15.147 -33.766 33.766 -33.766 c 18.619 0 33.766 15.148 33.766 33.766 C 242.256 122.755 227.107 137.901 208.49 137.901 z" stroke-linecap="round" />
+</g>
+<g transform="matrix(1 0 0 1 206 221)"  >
+<path style="stroke: rgb(0,0,0); stroke-width: 1; stroke-dasharray: none; stroke-linecap: round; stroke-dashoffset: 0; stroke-linejoin: round; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;"  transform=" translate(-206, -221)" d="M 205.999 221 L 206.001 221" stroke-linecap="round" />
+</g>
+</svg>
