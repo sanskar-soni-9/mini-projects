@@ -1,0 +1,584 @@
+@font-face {
+font-family: "Merriweather Bold";
+src: url("assets/fonts/Merriweather-Bold.ttf");
+}
+@font-face {
+font-family: "Merriweather Bold Italic";
+src: url("assets/fonts/Merriweather-BoldItalic.ttf");
+}
+@font-face {
+font-family: "Merriweather Light";
+src: url("assets/fonts/Merriweather-Light.ttf");
+}
+@font-face {
+font-family: "Merriweather Light Italic";
+src: url("assets/fonts/Merriweather-LightItalic.ttf");
+}
+@font-face {
+font-family: "Source Sans Pro";
+src: url("assets/fonts/SourceSansPro-Black.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(to bottom, rgba(33, 41, 49, 0.85), rgba(30, 37, 45, 0.85)), url(/assets/images/bg.jpg);
+    background-color: rgba(33, 41, 49, 0.99);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+
+    font-family: 'Merriweather Light Italic', Georgia, serif;
+    font-size: 75%;
+    color: #212931;
+    max-width: 100%;
+    line-height: 175%;
+    font-weight: 600;
+    letter-spacing: 0.1vw;
+}
+
+h1 {
+    font-family: "Source Sans Pro", Helvetica, sans-serif;
+    font-size: 5rem;
+    color: #fff;
+    font-weight: 800;
+    line-height: 5rem;
+}
+
+h2 {
+    font-family: "Source Sans Pro", Helvetica, sans-serif;
+    font-size: 4rem;
+    color: #fff;
+    line-height: 4rem;
+}
+
+h3 {
+    font-family: "Source Sans Pro", Helvetica, sans-serif;
+    font-size: 1rem;
+    line-height: 2rem;
+    color: #717981;
+}
+
+.menu {
+    color: #fff;
+    font-family: "Source Sans Pro", Helvetica, sans-serif;
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    display: none;
+}
+
+header, header a:visited, header a:link {
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+.main-heading {
+    text-align: center;
+    padding: 0 30%;
+    height: auto;
+    margin-bottom: 2%;
+    margin-top: 25%;
+    font-size: 500%;
+}
+
+header p {
+    letter-spacing: 10%;
+    width: 60%;
+    text-align: center;
+    font-weight: 500;
+    margin: 0 auto;
+    margin-bottom: 3%;
+    font-family: 'Merriweather Light Italic', Georgia, serif;
+}
+
+header p span {
+    text-decoration: underline;
+    text-decoration-style: dashed;
+    text-decoration-thickness: 2%;
+    text-underline-offset: 5px;
+}
+
+header i {
+    font-size: 4vw;
+}
+
+ul {
+    list-style: none;
+}
+
+main {
+    width: 80%;
+    margin: 0 auto;
+}
+
+nav {
+    color: #fff;
+    display: flex;
+    background-color: rgba(144, 148, 152, 0.25);
+    align-items: center;
+    font-family: "Source Sans Pro", Helvetica, sans-serif;
+}
+
+.sections li, .handles li {
+    padding: 0.5rem 2rem;
+    font-size: 0.8rem;
+}
+.handles li {
+    font-size: 1.25rem;
+}
+
+.sections li:hover {
+    cursor: pointer;
+    color: #212931;
+    background-color: #fff;
+}
+
+.handles {
+    margin-left: auto;
+}
+
+.handles a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.handles ul, .sections ul {
+    display: flex;
+    color: #fff;
+}
+
+.active-section {
+    color: #212931;
+    background-color: #fff;
+}
+
+.main-section {
+    background-color: #fff;
+    text-align: center;
+}
+
+.m-date-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 3rem;
+    padding: 8% 0 5%;
+}
+
+.hr {
+    width: 20%;
+    height: 2px;
+    background-color: #eee;
+}
+
+.main  h2 {
+    color: #212931;
+    width: 50%;
+    margin: 0 auto;
+    margin-bottom: 3%;
+}
+
+.main-story-text {
+    width: 45%;
+    margin: 0 auto;
+    font-family: 'Merriweather Light Italic', Georgia, serif;
+    color: #212931;
+    margin-bottom: 5%;
+}
+
+.main-display-image {
+    max-width: 80%;
+    margin-bottom: 3%;
+}
+
+.main-full-story {
+    font-family: "Source Sans Pro", Helvetica, sans-serif;
+    border: 0.2rem solid #212931;
+    background-color: #fff;
+    padding: 1.5% 4%;
+    margin-bottom: 10%;
+}
+.main-full-story:hover, .card-btn:hover {
+    background-color: #212931;
+    color: #fff;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 5%;
+}
+
+.card {
+    border-top: 0.1rem solid #eee;
+    padding: 2% 10%;
+}
+
+.card:nth-child(2n+1) {
+    border-right: 0.1rem solid #eee;
+}
+.card-5, .card-6 {
+    border-bottom: 0.1rem solid #eee;
+}
+
+.card-date {
+    margin: 9% 0 2% 0;
+    font-family: 'Merriweather Light', Georgia, serif;
+    font-size: 12px;
+}
+
+.card h2 {
+    color: #212931;
+    font-size: 1.85rem;
+    line-height: 2.5rem;
+    margin: 0 auto 6%;
+}
+
+.card-image {
+    width: 100%;
+    margin-bottom: 4%;
+}
+
+.card-description {
+    margin: 0 auto 8%;
+    text-align: left;
+    font-size: 125%;
+    line-height: 225%;
+}
+
+.card-btn {
+    background-color: #fff;
+    font-size: 0.85vw;
+    font-family: "Source Sans Pro", Helvetica, sans-serif;
+    padding: 2% 5%;
+    margin-bottom: 8%;
+}
+
+.page-numbers {
+    display: flex;
+    justify-content: center;
+    color: #212931;
+    font-family: "Source Sans Pro", Helvetica, sans-serif;
+    font-size: 0.85rem;
+    margin-bottom: 5%;
+}
+.p-number {
+    padding: 1% 2%;
+    border-top: 0.1rem solid #eee;
+    border-bottom: 0.1rem solid #eee;
+    border-right: 0.1rem solid #eee;
+}
+.p-number:hover {
+    cursor: pointer;
+    background-color: #eee;
+}
+.page-1 {
+    border-left: 0.1rem solid #eee;
+}
+.active-page {
+    background-color: #eee;
+}
+
+.contact-me {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: left;
+    background-color: #f5f5f5;
+    margin-bottom: 5%;
+}
+.form, .contact-details {
+    width: 100%;
+}
+.form {
+    padding: 10%;
+    border-top: 0.1rem solid #909498;
+    border-bottom: 0.1rem solid #909498;
+    border-right: 0.1rem solid #909498;
+}
+.form label {
+    font-family: "Source Sans Pro", Helvetica, sans-serif;
+    color: #717981;
+    font-size: 0.9rem;
+}
+.form input[type="text"], .form input[type="email"] {
+    border: 0.1rem solid #909498;
+    height: 3vw;
+    width: 100%;
+    background-color: #f5f5f5;
+    margin-bottom: 5%;
+}
+.form textarea {
+    border: 0.1rem solid #909498;
+    width: 100%;
+    background-color: #f5f5f5;
+    margin-bottom: 5%;
+}
+.submit-btn {
+    font-family: "Source Sans Pro", Helvetica, sans-serif;
+    color: #717981;
+    border: 0.15rem solid #909498;
+    background-color: #f5f5f5;
+    padding: 3% 9%;
+}
+.submit-btn:hover {
+    border-color: #212931;
+    color: #212931;
+}
+
+.contact-details {
+    border-top: 2px solid #909498;
+    border-bottom: 2px solid #909498;
+}
+.details {
+    padding: 10%;
+    border-bottom: 0.1rem solid #909498;
+    display: flex;
+    align-items: center;
+    column-gap: 7%;
+}
+.social-handles {
+    border-bottom: none;
+}
+.details address {
+    font-size: 0.75rem;
+    color: #909498;
+}
+.contact-handles {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+}
+.contact-handle {
+    border-radius: 100%;
+    border: 0.1rem solid #909498;
+    padding: 20% 20% 10%;
+    width: 3rem;
+    text-align: center;
+}
+.contact-handle i {
+    font-size: 150%;
+}
+.contact-handles a {
+    text-decoration: none;
+    color: #717981;
+}
+.contact-handle:hover{
+    color: #212931;
+    border-color: #212931;
+}
+
+footer {
+    color: rgba(144, 148, 152, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 1.5vw;
+    font-family: "Source Sans Pro", Helvetica, sans-serif;
+    font-size: 0.85rem;
+    margin-bottom: 7%;
+}
+.vr {
+    height: 1.5vw;
+    width: 0.1vw;
+    background-color: rgba(144, 148, 152, 0.5);
+}
+footer span {
+    text-decoration: underline;
+    text-decoration-style: dashed;
+    text-underline-offset: 0.1rem;
+}
+
+@media only screen and (max-width: 1140px) {
+    nav, .page-1, .page-2, .page-3, .page-more, .page-8, .page-9, .page-10, header i, .vr {
+        display: none;
+    }
+    .cards-container, .contact-me {
+        grid-template-columns: 1fr;
+    }
+    main, .main-heading, header p {
+        margin: 0;
+    }
+    .menu {
+        display: block;
+    }
+    header p {
+        font-size: 75%;
+        line-height: 200%;
+        margin: 0 auto;
+        width: 90%;
+        margin-bottom: 10%;
+    }
+    main {
+        width: 100%;
+    }
+    .main-heading {
+        padding: 0 2%;
+        font-size: 250%;
+        margin-top: 35%;
+    }
+    .main {
+        padding: 5% 10%;
+        border-bottom: 0.1rem solid #eee;
+    }
+    .m-date-container {
+        column-gap: 1rem;
+    }
+    .main h2 {
+        width: 100%;
+        font-size: 250%;
+        line-height: 125%;
+        padding: 0;
+    }
+    .main-story-text {
+        width: 100%;
+        padding: 0;
+    }
+    .main-display-image {
+        width: 100%;
+        max-width: 100%;
+    }
+    .main-full-story {
+        width: 100%;
+        border: 0.1rem solid #212931;
+        padding: 5%;
+    }
+    .card {
+        padding: 1% 10%;
+    }
+    .card-date {
+        margin-bottom: 5%;
+    }
+    .card h2 {
+        line-height: 125%;
+        width: 100%;
+        margin-bottom: 8%;
+    }
+    .card-image, .card-description {
+        max-width: 100%;
+        width: 100%;
+        font-size: 125%;
+        line-height: 200%;
+    }
+    .card-btn {
+        font-size: 100%;
+        letter-spacing: 0.1rem;
+        width: 100%;
+        border: 0.1rem solid #212931;
+        padding: 4%;
+    }
+    .card-1 {
+        border-top: none;
+    }
+    .page-next {
+        border: 0.1rem solid #eee;
+        padding: 2% 7%;
+    }
+    .form {
+        border: none;
+    }
+    .form input[type="text"], .form input[type="email"] {
+        height: 10vw;
+        width: 100%;
+        margin-top: 2%;
+    }
+    form textarea {
+        margin-top: 2%;
+    }
+    form .submit-btn {
+        width: 100%;
+        border: 0.1rem solid #717981;
+    }
+    .contact-handle {
+        padding: 15% 15% 7%;
+    }
+    .contact-handle i{
+        font-size: 125%;
+    }
+    footer {
+        display: block;
+        text-align: center;
+    }
+}
+
+
+.menu-container {
+    z-index: 5;
+    background-color: #fff;
+    width: 60%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    display: none;
+    padding: 0 5%;
+}
+
+.cross {
+    position: absolute;
+    top: 1%;
+    right: 1%;
+}
+.cross i {
+    font-size: 150%;
+}
+.cross + h2 {
+    margin-top: 10%;
+}
+.menu-container h2 {
+    color: #212931;
+    font-size: 0.8rem;
+    line-height: 1;
+    padding: 7% 1%;
+}
+
+.menu-hr {
+    width: 100%;
+    height: 2px;
+    background-color: #eee;
+}
+.menu-socials {
+    margin-top: 10%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.menu-socials a {
+    color: #212931;
+}
+.menu-social {
+    border-radius: 100%;
+    border: 0.1rem solid #909498;
+    padding: 20% 20% 10%;
+    width: 2rem;
+    text-align: center;
+}
+.menu-social i{
+    font-size: 125%;
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    display: none;
+}
