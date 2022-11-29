@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAD - Guess The Number</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <button class="reset">Play Again!</button>
+            <span>(Between 1 and 100)</span>
+        </nav>
+        <h1>Guess The Number!</h1>
+        <link rel="stylesheet" href="style.css">
+    </header>
+    <main>
+        <div class="right-answer-monitor"><span class="right-answer">?</span></div>
+        <section>
+            <div class="user-input">
+                <input type="number" maxlength="100" minlength="1" id="user-input"><br>
+                <button type="submit" class="check">Check!</button>
+            </div>
+            <div class="score-status-container">
+                <p class="status">Start guessing...</p>
+                <p class="score-status">Score: <span class="score">20</span></p>
+                <p>Highscore: <span class="highscore">0</span></p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        MAD by Sanskar Soni
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
