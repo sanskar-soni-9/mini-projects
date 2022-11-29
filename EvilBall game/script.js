@@ -159,7 +159,8 @@ class EvilCircle extends Shape {
           ballCountP.textContent = `Ball count: ${ballCount}`;
         }
         if (ballCount === 0) {
-          ballGameStatusH1.textContent = "GAME-OVER, Thanks for playing 😊";
+          ballGameStatusH1.textContent =
+            "GAME-OVER, Thanks for playing 😊 (Refresh to play again)";
         }
       }
     }
