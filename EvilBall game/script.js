@@ -18,7 +18,6 @@ ballCountP.textContent = `Ball count: ${ballCount}`;
 
 const width = (canvas.width = canvasContainer.offsetWidth);
 const height = (canvas.height = canvasContainer.offsetHeight);
-console.log(canvasContainer.offsetHeight, canvasContainer.offsetWidth);
 // function to generate random number
 function random(min, max) {
   const num = Math.floor(Math.random() * (max - min + 1)) + min;
@@ -93,31 +92,26 @@ class EvilCircle extends Shape {
     this.color = "#fff";
     this.size = 10;
     window.addEventListener("keydown", (e) => {
-      console.log(e.key);
       switch (e.key) {
         case "a":
         case "A":
         case "ArrowLeft":
           evil.x -= evil.velX;
-          console.log(e.key);
           break;
         case "d":
         case "D":
         case "ArrowRight":
           evil.x += evil.velX;
-          console.log(e.key);
           break;
         case "w":
         case "W":
         case "ArrowUp":
           evil.y -= evil.velY;
-          console.log(e.key);
           break;
         case "s":
         case "S":
         case "ArrowDown":
           evil.y += evil.velY;
-          console.log(e.key);
           break;
       }
     });
