@@ -63,11 +63,13 @@ header {
 }
 h2.top-projects-heading {
   margin-bottom: 0;
+  display: inline-block;
 }
 .project-info {
   font-size: 2.8em;
   font-family: cursive;
   margin-bottom: 3%;
+  display: inline-block;
 }
 .project-container {
   display: flex;
@@ -127,21 +129,23 @@ div.other-projects-container {
   width: 100%;
   text-align: center;
   font-size: 3em;
+  background-color: #d6336c;
 }
 .socials-heading {
-  margin: 1% 0 4%;
+  padding: 4% 0 5%;
+  color: #fff;
 }
 .social-handles-container {
   display: flex;
   justify-content: space-around;
-  margin-bottom: 5%;
+  padding-bottom: 5%;
 }
 
 .social a:link,
 .social a:visited,
 .social a:active {
   text-decoration: none;
-  color: #d6336c;
+  color: #fff;
 }
 .social svg {
   width: 48px;
@@ -149,7 +153,7 @@ div.other-projects-container {
 }
 
 .social a:hover svg {
-  border: 0.09em #d6336c solid;
+  border: 0.09em #fff solid;
   border-radius: 10px;
   scale: 1.25;
   padding: 8%;
