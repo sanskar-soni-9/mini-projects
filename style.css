@@ -2,6 +2,10 @@
   font-family: "Brush Script MT";
   src: url(assets/fonts/brush\ script\ mt\ kursiv.ttf);
 }
+@font-face {
+  font-family: Nunito;
+  src: url(assets/fonts/Nunito-Italic-VariableFont_wght.ttf);
+}
 
 * {
   margin: 0;
@@ -14,7 +18,7 @@ body {
   color: #d6336c;
   font-size: 10px;
   font-family: "Brush Script MT", Brush Script Std, cursive;
-  background: #fff0f6;
+  background: linear-gradient(to bottom, #ffdeeb, #fff0f6);
 }
 nav {
   display: flex;
@@ -57,6 +61,14 @@ header {
   text-decoration: underline;
   text-underline-offset: 6px;
 }
+h2.top-projects-heading {
+  margin-bottom: 0;
+}
+.project-info {
+  font-size: 2.8em;
+  font-family: cursive;
+  margin-bottom: 3%;
+}
 .project-container {
   display: flex;
   justify-content: space-between;
@@ -92,6 +104,7 @@ header {
   justify-content: center;
   align-items: center;
   transition: 1s;
+  font-family: cursive;
 }
 .project a:link,
 .project a:visited,
