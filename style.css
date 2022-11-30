@@ -137,6 +137,9 @@ div.other-projects-container {
   padding: 4% 0 5%;
   color: #fff;
 }
+.social {
+  transition: all 1s;
+}
 .social-handles-container {
   display: flex;
   justify-content: space-around;
@@ -172,4 +175,8 @@ div.other-projects-container {
 .intersection-animation {
   transform: translateY(100px);
   opacity: 0;
+}
+
+.social-animation {
+  scale: -1;
 }

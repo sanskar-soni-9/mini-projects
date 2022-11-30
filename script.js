@@ -4,13 +4,26 @@ const projectsOverlay = document.querySelectorAll(".project-overlay");
 const navBar = document.querySelector("nav");
 const navLinks = document.querySelectorAll(".nav-link");
 const projectContainers = document.querySelectorAll(".projects");
+const socials = document.querySelectorAll(".social");
 
-let options = { rootMargin: "0px", threshold: "0.5" };
+let projectsOptions = { rootMargin: "0px", threshold: "0.4" };
+let socialOptions = { rootMargin: "0px", threshold: "1.0" };
+
+const socialObserver = new IntersectionObserver(socialAnimation, socialOptions);
 
 const projectObserver = new IntersectionObserver(
   projectObserverCallBack,
-  options
+  projectsOptions
 );
+
+function socialAnimation(entries, observer) {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.remove("social-animation");
+      socialObserver.unobserve(entry.target);
+    }
+  });
+}
 
 function projectObserverCallBack(entries, observer) {
   entries.forEach((entry) => {
@@ -20,6 +33,12 @@ function projectObserverCallBack(entries, observer) {
     }
   });
 }
+
+socials.forEach((i) => {
+  if (i) {
+    socialObserver.observe(i);
+  }
+});
 
 projectContainers.forEach((i) => {
   if (i) {
