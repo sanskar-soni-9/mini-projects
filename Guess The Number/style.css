@@ -1,101 +1,106 @@
 body {
-    margin: 0;
-    text-align: center;
-    color: rgba(255, 255, 255, 0.731);
-    background-color: rgb(191, 191, 191);
+  margin: 0;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.731);
+  background-color: rgb(191, 191, 191);
 }
 
 header {
-    background-color: rgb(40, 40, 40);
+  background-color: rgb(40, 40, 40);
 }
 nav {
-    display: flex;
-    font-size: 2vw;
-    padding: 0.75rem 1rem;
+  display: flex;
+  font-size: 2vw;
+  padding: 0.75rem 1rem;
 }
 span {
-    margin-left: auto;
+  margin-left: auto;
 }
 nav button {
-    padding: 1rem 2rem;
-    font-size: 2vw;
-    margin-right: 1rem;
-    color: #000;
-    background-color: rgb(201, 201, 201);
+  padding: 1rem 2rem;
+  font-size: 2vw;
+  margin-right: 1rem;
+  color: #000;
+  background-color: rgb(201, 201, 201);
 }
 
 header h1 {
-    font-size: 4vw;
-    padding-top: 2%;
-    padding-bottom: 9%;
-    margin: 0;
-    margin-bottom: 1%;
+  font-size: 4vw;
+  padding-top: 2%;
+  padding-bottom: 9%;
+  margin: 0;
+  margin-bottom: 1%;
 }
 
-.right-answer-monitor span{
-    font-size: 7rem;
-    position: relative;
-    bottom: 0.65em;
-    color: rgb(40, 40, 40);
-    background-color: rgb(201, 201, 201);
-    padding: 0.1em 1em;
+.right-answer-monitor span {
+  font-size: 7rem;
+  position: relative;
+  bottom: 0.65em;
+  color: rgb(40, 40, 40);
+  background-color: rgb(201, 201, 201);
+  padding: 0.1em 1em;
 }
 
 main {
-    background-color: rgb(40, 40, 40);
-    padding-bottom: 3%;
+  background-color: rgb(40, 40, 40);
+  padding-bottom: 3%;
 }
 main section {
-    padding-top: 2rem;
-    display: flex;
-    justify-content: center;
+  padding-top: 2rem;
+  display: flex;
+  justify-content: center;
 }
 .user-input {
-    text-align: center;
-    padding-right: 7.5%;
+  text-align: center;
+  padding-right: 7.5%;
 }
 .check {
-    background-color: rgb(201, 201, 201);
-    border-color: rgb(201, 201, 201);
+  background-color: rgb(201, 201, 201);
+  border-color: rgb(201, 201, 201);
 }
 
 input {
-    font-size: 5vw;
-    width: 10rem;
-    height: 5rem;
-    text-align: center;
-    color: rgb(197, 194, 194);
-    background-color: rgb(40, 40, 40);
-    border: solid rgba(255, 255, 255, 0.731) 3px;
+  font-size: 5vw;
+  width: 10rem;
+  height: 5rem;
+  text-align: center;
+  color: rgb(197, 194, 194);
+  background-color: rgb(40, 40, 40);
+  border: solid rgba(255, 255, 255, 0.731) 3px;
 }
 .user-input button {
-    margin-top: 18%;
-    font-size: 2vw;
-    padding: 0.5rem 1rem;
+  margin-top: 18%;
+  font-size: 2vw;
+  padding: 0.5rem 1rem;
+}
+
+.status {
+  scale: 1.5;
+  color: #fff;
 }
 
 .score-status-container p {
-    margin: 0;
-    margin-bottom: 9%;
+  margin: 0;
+  margin-bottom: 9%;
 }
 .score-status-container {
-    padding-left: 7.5%;
-    text-align: left;
-    font-size: 2vw;
+  padding-left: 7.5%;
+  text-align: left;
+  font-size: 2vw;
 }
 
 footer {
-    background-color: rgb(40, 40, 40);
-    font-size: 1.3vw;
+  background-color: rgb(40, 40, 40);
+  font-size: 1.3vw;
 }
 
 nav button:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
-.user-input button:hover{
-    cursor: pointer;
+.user-input button:hover {
+  cursor: pointer;
 }
 
 .won {
-    background-color: #60b347;
+  background-color: #60b347;
 }
