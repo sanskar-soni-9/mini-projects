@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  box-sizing: border-box;
+  color: #d6336c;
+  font-size: 10px;
+  font-family: Brush Script MT, Brush Script Std, cursive;
+  background: #fff0f6;
+}
+
+/*HEAD*/
+.socials-section {
+  width: 100%;
+  text-align: center;
+  font-size: 3em;
+}
+.socials-heading {
+  margin: 1% 0 4%;
+}
+.social-handles-container {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 5%;
+}
+
+.social a:link,
+.social a:visited,
+.social a:active {
+  text-decoration: none;
+  color: #d6336c;
+}
+.social svg {
+  width: 48px;
+  height: 48px;
+}
+
+.social a:hover svg {
+  border: 0.09em #d6336c solid;
+  border-radius: 10px;
+  scale: 1.25;
+  padding: 8%;
+  transition: scale 0.25s;
+}
+
+.devider {
+  width: 5%;
+  height: 0.1em;
+  border-bottom: 1.75em #d6336c dotted;
+  margin: 0 auto;
+}
