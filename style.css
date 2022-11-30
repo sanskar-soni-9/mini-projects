@@ -1,6 +1,6 @@
 @font-face {
-  font-family: "Brush Script MT";
-  src: url(assets/fonts/brush\ script\ mt\ kursiv.ttf);
+  font-family: "Kalam-Regular";
+  src: url(assets/fonts/Kalam-Regular.ttf);
 }
 @font-face {
   font-family: Nunito;
@@ -17,7 +17,7 @@ body {
   box-sizing: border-box;
   color: #d6336c;
   font-size: 10px;
-  font-family: "Brush Script MT", Brush Script Std, cursive;
+  font-family: "Kalam-Regular";
   background: linear-gradient(to bottom, #ffdeeb, #fff0f6);
 }
 nav {
