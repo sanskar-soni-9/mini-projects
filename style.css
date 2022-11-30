@@ -55,6 +55,7 @@ header {
 .projects {
   padding: 0 2%;
   margin-bottom: 10%;
+  transition: all 1s;
 }
 .project-heading {
   font-size: 4.6em;
@@ -166,4 +167,9 @@ div.other-projects-container {
   height: 0.1em;
   border-bottom: 1.75em #d6336c dotted;
   margin: 0 auto 5%;
+}
+
+.intersection-animation {
+  transform: translateY(100px);
+  opacity: 0;
 }

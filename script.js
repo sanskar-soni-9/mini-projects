@@ -3,6 +3,29 @@
 const projectsOverlay = document.querySelectorAll(".project-overlay");
 const navBar = document.querySelector("nav");
 const navLinks = document.querySelectorAll(".nav-link");
+const projectContainers = document.querySelectorAll(".projects");
+
+let options = { rootMargin: "0px", threshold: "0.5" };
+
+const projectObserver = new IntersectionObserver(
+  projectObserverCallBack,
+  options
+);
+
+function projectObserverCallBack(entries, observer) {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.remove("intersection-animation");
+      projectObserver.unobserve(entry.target);
+    }
+  });
+}
+
+projectContainers.forEach((i) => {
+  if (i) {
+    projectObserver.observe(i);
+  }
+});
 
 //Event Handlers
 navBar.addEventListener("click", function (e) {
