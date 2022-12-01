@@ -5,7 +5,6 @@ const keys = document.querySelectorAll(".key");
 const displayField = document.querySelector("#display-field");
 
 let expression = "";
-let answer = 0;
 
 const createExpression = function (key) {
   if (key === "DEL") {
@@ -20,9 +19,8 @@ const createExpression = function (key) {
   }
   if (key === "=") {
     if (!expression) return;
-    answer = calculate(expression);
+    displayField.value = eval(expression); //calculate using eval()
     expression = "";
-    displayField.value = answer;
     return;
   }
   expression += key;
@@ -35,30 +33,6 @@ const createExpression = function (key) {
   )
     expression = "0" + expression;
   displayField.value = expression;
-};
-
-//Calculate
-const calculate = function (expression) {
-  while (expression !== "") {
-    if (expression[0] === "+") {
-      expression = expression.slice(1);
-      return (answer = answer + calculate(expression));
-    } else if (expression[0] === "-") {
-      expression = expression.slice(1);
-      return (answer = answer - calculate(expression));
-    } else if (expression[0] === "*") {
-      expression = expression.slice(1);
-      return (answer = answer * calculate(expression));
-    } else if (expression[0] === "/") {
-      expression = expression.slice(1);
-      return (answer = answer / calculate(expression));
-    } else {
-      answer = parseFloat(expression);
-      expression = expression.replace(answer, "");
-      if (expression === "") return answer;
-      else return calculate(expression);
-    }
-  }
 };
 
 //Conditions
