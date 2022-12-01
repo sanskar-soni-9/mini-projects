@@ -18,7 +18,7 @@ body {
   color: #d6336c;
   font-size: 10px;
   font-family: "Kalam-Regular";
-  background: linear-gradient(to bottom, #ffdeeb, #fff0f6);
+  background: linear-gradient(to bottom, #fff0f6, #ffdeeb);
 }
 nav {
   display: flex;
