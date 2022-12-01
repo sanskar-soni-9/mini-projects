@@ -27,6 +27,7 @@ nav {
   justify-content: space-around;
   color: #fff;
   align-items: center;
+  margin-bottom: 7%;
 }
 .nav-link {
   border-radius: 10px;
@@ -39,22 +40,21 @@ nav {
 }
 
 header {
-  padding-top: 3%;
   text-align: center;
 }
 .projects-heading {
   font-size: 4.8em;
-  margin-bottom: 3%;
+  margin-bottom: 1%;
 }
 .mini-projects-description {
   font-size: 3em;
-  margin-bottom: 5%;
+  margin-bottom: 8%;
 }
 
 /* TOP Projects */
 .projects {
   padding: 0 2%;
-  margin-bottom: 10%;
+  margin-bottom: 2%;
   transition: all 1s;
 }
 .project-heading {
@@ -79,6 +79,7 @@ h2.top-projects-heading {
 }
 .project {
   width: 20%;
+  height: 300px;
   position: relative;
 }
 .project-name {
@@ -87,7 +88,7 @@ h2.top-projects-heading {
 }
 .project img {
   width: 100%;
-  height: 100%;
+  height: 60%;
   border-radius: 20px;
   margin-bottom: 3%;
 }
@@ -99,7 +100,7 @@ h2.top-projects-heading {
 }
 .project-overlay {
   width: 100%;
-  height: 100%;
+  height: 60%;
   background-color: rgba(214, 51, 108, 0.8);
   position: absolute;
   top: 0;
