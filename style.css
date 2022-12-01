@@ -28,7 +28,7 @@ body {
 .menu-button {
   display: none;
   position: absolute;
-  top: 0.25%;
+  top: 0.5%;
   right: 3%;
   color: #fff;
   background-color: #d6336c;
@@ -251,10 +251,10 @@ nav.menu {
 .arrow:hover {
   cursor: pointer;
 }
+
 @media only screen and (max-width: 850px) {
   .menu-button {
     display: block;
-    top: 0.1%;
   }
   nav {
     display: none;
@@ -349,7 +349,7 @@ nav.menu {
     top: 1.75%;
   }
   .menu-button {
-    top: 0;
+    /* top: 5px; */
   }
   .project img,
   .project-overlay {
