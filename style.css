@@ -20,6 +20,21 @@ body {
   font-family: "Kalam-Regular";
   background: linear-gradient(to bottom, #fff0f6, #ffdeeb);
 }
+
+.menu-button {
+  display: none;
+  position: absolute;
+  top: 1%;
+  right: 3%;
+  color: #fff;
+  background-color: #d6336c;
+  padding: 8px 8px 4px;
+  border-radius: 12px;
+}
+.menu-button:hover {
+  cursor: pointer;
+}
+
 nav {
   display: flex;
   font-size: 3em;
@@ -180,4 +195,43 @@ div.other-projects-container {
 
 .social-animation {
   scale: -1;
+}
+
+@media only screen and (max-width: 850px) {
+  .menu-button {
+    display: block;
+  }
+  nav {
+    display: none;
+  }
+  .projects-heading {
+    margin-top: 4%;
+  }
+  .project {
+    height: 250px;
+  }
+  body {
+    font-size: 7px;
+  }
+  .social svg {
+    width: 32px;
+    height: 32px;
+  }
+  .devider {
+    width: 10%;
+    border-bottom: 1.25em #d6336c dotted;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  body {
+    font-size: 4px;
+  }
+  .project {
+    height: 150px;
+  }
+  .social svg {
+    width: 28px;
+    height: 28px;
+  }
 }
