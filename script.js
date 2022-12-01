@@ -8,7 +8,13 @@ const socials = document.querySelectorAll(".social");
 const menuBtn = document.querySelector(".menu-button svg");
 const menuOverlay = document.querySelector(".menu-overlay");
 const menuCloseBtn = document.querySelector(".close-menu");
+const arrowLeftBtns = document.querySelectorAll(".arrow-left");
+const arrowRightBtns = document.querySelectorAll(".arrow-right");
+const topProjects = document.querySelectorAll(".top-project");
+const codedamnProjects = document.querySelectorAll(".codedamn-project");
+const otherProjects = document.querySelectorAll(".other-project");
 
+//Menu
 function showMenu() {
   menuOverlay.classList.remove("hidden-perm");
   navBar.classList.add("menu");
@@ -20,6 +26,15 @@ function closeMenu() {
   menuCloseBtn.classList.add("hidden-perm");
 }
 
+//Mobile arrow buttons function
+function moveLeft(projects) {
+  console.log("--Under Construction--");
+}
+function moveRight(projects) {
+  console.log("--Under Construction--");
+}
+
+//Animation
 let projectsOptions = { rootMargin: "0px", threshold: "0.4" };
 let socialOptions = { rootMargin: "0px", threshold: "1.0" };
 
@@ -91,3 +106,23 @@ window.addEventListener("mouseout", function (e) {
 menuBtn.addEventListener("click", showMenu);
 menuCloseBtn.addEventListener("click", closeMenu);
 menuOverlay.addEventListener("click", closeMenu);
+
+for (const leftBtn of arrowLeftBtns) {
+  console.log(leftBtn);
+  leftBtn.addEventListener("click", function (e) {
+    if (e.target.closest(".top-projects-container")) moveRight(topProjects);
+    else if (e.target.closest(".codedamn-projects-container"))
+      moveRight(codedamnProjects);
+    else if (e.target.closest(".other-projects-container"))
+      moveRight(otherProjects);
+  });
+}
+for (const rightBtn of arrowRightBtns) {
+  rightBtn.addEventListener("click", function (e) {
+    if (e.target.closest(".top-projects-container")) moveLeft(topProjects);
+    else if (e.target.closest(".codedamn-projects-container"))
+      moveLeft(codedamnProjects);
+    else if (e.target.closest(".other-projects-container"))
+      moveLeft(otherProjects);
+  });
+}
