@@ -190,12 +190,12 @@ div.other-projects-container {
   transition: scale 0.25s;
 }
 
-.devider {
+/* .devider {
   width: 5%;
   height: 0.1em;
   border-bottom: 1.75em #d6336c dotted;
   margin: 0 auto 5%;
-}
+} */
 
 .intersection-animation {
   transform: translateY(100px);
@@ -305,10 +305,10 @@ nav.menu {
     width: 32px;
     height: 32px;
   }
-  .devider {
+  /* .devider {
     width: 10%;
     border-bottom: 1.25em #d6336c dotted;
-  }
+  } */
   nav.menu {
     width: 40%;
     padding-top: 10%;
