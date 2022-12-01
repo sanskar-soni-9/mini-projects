@@ -6,6 +6,7 @@
   font-family: Nunito;
   src: url(assets/fonts/Nunito-Italic-VariableFont_wght.ttf);
 }
+
 html {
   overflow-x: hidden;
 }
@@ -14,7 +15,6 @@ html {
   padding: 0;
   box-sizing: inherit;
 }
-
 body {
   box-sizing: border-box;
   color: #d6336c;
@@ -25,6 +25,7 @@ body {
   overflow: hidden;
 }
 
+/* menu */
 .menu-button {
   display: none;
   position: absolute;
@@ -39,7 +40,6 @@ body {
 .menu-button:hover {
   cursor: pointer;
 }
-
 nav {
   display: flex;
   font-size: 3em;
@@ -59,7 +59,39 @@ nav {
   text-decoration: underline;
   text-underline-offset: 7px;
 }
+nav.menu {
+  display: block;
+  width: 80%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  z-index: 3;
+  padding: 7% 3% 0;
+}
+.menu-overlay {
+  width: 100%;
+  height: 50%;
+  background: rgba(255, 222, 235, 0.4);
+  z-index: 1;
+  position: absolute;
+}
+.close-menu {
+  position: absolute;
+  top: 1.75%;
+  right: 2%;
+  color: #d6336c;
+  background-color: #fff;
+  padding: 3px 10px 0;
+  z-index: 2;
+  border-radius: 100px;
+}
+.close-menu:hover {
+  color: #fff;
+  background: #d6336c;
+}
 
+/* header */
 header {
   text-align: center;
 }
@@ -73,16 +105,24 @@ header {
 }
 
 /* TOP Projects */
+.arrow {
+  display: none;
+  position: absolute;
+  color: #d6336c;
+  top: 35%;
+  z-index: 1;
+}
+.arrow svg {
+  width: 32px;
+  height: 32px;
+}
+.arrow:hover {
+  cursor: pointer;
+}
 .projects {
   padding: 0 2%;
   margin-bottom: 2%;
   transition: all 1s;
-}
-.project-heading {
-  font-size: 4.6em;
-  margin-bottom: 3%;
-  text-decoration: underline;
-  text-underline-offset: 6px;
 }
 h2.top-projects-heading {
   margin-bottom: 0;
@@ -94,6 +134,14 @@ h2.top-projects-heading {
   margin-bottom: 3%;
   display: inline-block;
 }
+
+.project-heading {
+  font-size: 4.6em;
+  margin-bottom: 3%;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+
 .project-container {
   display: flex;
   justify-content: space-between;
@@ -140,14 +188,6 @@ h2.top-projects-heading {
   color: #d6336c;
 }
 
-.hidden-temp {
-  opacity: 0;
-  transition: 1s;
-}
-.hidden-perm {
-  display: none;
-}
-
 div.other-projects-container {
   justify-content: space-around;
 }
@@ -190,6 +230,21 @@ div.other-projects-container {
   transition: scale 0.25s;
 }
 
+.social-animation {
+  scale: -1;
+}
+.intersection-animation {
+  transform: translateY(100px);
+  opacity: 0;
+}
+
+.hidden-temp {
+  opacity: 0;
+  transition: 1s;
+}
+.hidden-perm {
+  display: none;
+}
 /* .devider {
   width: 5%;
   height: 0.1em;
@@ -197,61 +252,7 @@ div.other-projects-container {
   margin: 0 auto 5%;
 } */
 
-.intersection-animation {
-  transform: translateY(100px);
-  opacity: 0;
-}
-
-.social-animation {
-  scale: -1;
-}
-
-nav.menu {
-  display: block;
-  width: 80%;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  height: 100%;
-  z-index: 3;
-  padding: 7% 3% 0;
-}
-.menu-overlay {
-  width: 100%;
-  height: 50%;
-  background: rgba(255, 222, 235, 0.4);
-  z-index: 1;
-  position: absolute;
-}
-.close-menu {
-  position: absolute;
-  top: 1.75%;
-  right: 2%;
-  color: #d6336c;
-  background-color: #fff;
-  padding: 3px 10px 0;
-  z-index: 2;
-  border-radius: 100px;
-}
-.close-menu:hover {
-  color: #fff;
-  background: #d6336c;
-}
-.arrow {
-  display: none;
-  position: absolute;
-  color: #d6336c;
-  top: 35%;
-  z-index: 1;
-}
-.arrow svg {
-  width: 32px;
-  height: 32px;
-}
-.arrow:hover {
-  cursor: pointer;
-}
-
+/* Media query */
 @media only screen and (max-width: 850px) {
   .menu-button {
     display: block;

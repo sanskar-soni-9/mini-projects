@@ -8,8 +8,8 @@ const socials = document.querySelectorAll(".social");
 const menuBtn = document.querySelector(".menu-button svg");
 const menuOverlay = document.querySelector(".menu-overlay");
 const menuCloseBtn = document.querySelector(".close-menu");
-const arrowLeftBtns = document.querySelectorAll(".arrow-left");
-const arrowRightBtns = document.querySelectorAll(".arrow-right");
+const arrowLeftBtn = document.querySelector(".arrow-left");
+const arrowRightBtn = document.querySelector(".arrow-right");
 const topProjects = document.querySelectorAll(".top-project");
 const codedamnProjects = document.querySelectorAll(".codedamn-project");
 const otherProjects = document.querySelectorAll(".other-project");
@@ -37,7 +37,6 @@ function moveRight(projects) {
 //Animation
 let projectsOptions = { rootMargin: "0px", threshold: "0.4" };
 let socialOptions = { rootMargin: "0px", threshold: "1.0" };
-
 const socialObserver = new IntersectionObserver(socialAnimation, socialOptions);
 
 const projectObserver = new IntersectionObserver(
@@ -76,6 +75,7 @@ projectContainers.forEach((i) => {
 });
 
 //Event Handlers
+// Navigation
 navBar.addEventListener("click", function (e) {
   for (const link of navLinks) {
     if (e.target === link) {
@@ -87,6 +87,11 @@ navBar.addEventListener("click", function (e) {
   }
 });
 
+menuBtn.addEventListener("click", showMenu);
+menuCloseBtn.addEventListener("click", closeMenu);
+menuOverlay.addEventListener("click", closeMenu);
+
+// Animation
 window.addEventListener("mouseover", function (e) {
   for (const project of projectsOverlay) {
     if (e.target.closest(".project-overlay") === project) {
@@ -94,7 +99,6 @@ window.addEventListener("mouseover", function (e) {
     }
   }
 });
-
 window.addEventListener("mouseout", function (e) {
   for (const project of projectsOverlay) {
     if (e.target.closest(".project-overlay") === project) {
@@ -103,26 +107,5 @@ window.addEventListener("mouseout", function (e) {
   }
 });
 
-menuBtn.addEventListener("click", showMenu);
-menuCloseBtn.addEventListener("click", closeMenu);
-menuOverlay.addEventListener("click", closeMenu);
-
-for (const leftBtn of arrowLeftBtns) {
-  console.log(leftBtn);
-  leftBtn.addEventListener("click", function (e) {
-    if (e.target.closest(".top-projects-container")) moveRight(topProjects);
-    else if (e.target.closest(".codedamn-projects-container"))
-      moveRight(codedamnProjects);
-    else if (e.target.closest(".other-projects-container"))
-      moveRight(otherProjects);
-  });
-}
-for (const rightBtn of arrowRightBtns) {
-  rightBtn.addEventListener("click", function (e) {
-    if (e.target.closest(".top-projects-container")) moveLeft(topProjects);
-    else if (e.target.closest(".codedamn-projects-container"))
-      moveLeft(codedamnProjects);
-    else if (e.target.closest(".other-projects-container"))
-      moveLeft(otherProjects);
-  });
-}
+arrowLeftBtn.addEventListener("click", moveRight);
+arrowRightBtn.addEventListener("click", moveLeft);
