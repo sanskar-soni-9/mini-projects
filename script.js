@@ -5,6 +5,20 @@ const navBar = document.querySelector("nav");
 const navLinks = document.querySelectorAll(".nav-link");
 const projectContainers = document.querySelectorAll(".projects");
 const socials = document.querySelectorAll(".social");
+const menuBtn = document.querySelector(".menu-button svg");
+const menuOverlay = document.querySelector(".menu-overlay");
+const menuCloseBtn = document.querySelector(".close-menu");
+
+function showMenu() {
+  menuOverlay.classList.remove("hidden-perm");
+  navBar.classList.add("menu");
+  menuCloseBtn.classList.remove("hidden-perm");
+}
+function closeMenu() {
+  menuOverlay.classList.add("hidden-perm");
+  navBar.classList.remove("menu");
+  menuCloseBtn.classList.add("hidden-perm");
+}
 
 let projectsOptions = { rootMargin: "0px", threshold: "0.4" };
 let socialOptions = { rootMargin: "0px", threshold: "1.0" };
@@ -50,6 +64,7 @@ projectContainers.forEach((i) => {
 navBar.addEventListener("click", function (e) {
   for (const link of navLinks) {
     if (e.target === link) {
+      closeMenu();
       document
         .querySelector(`.${link.dataset.target}`)
         .scrollIntoView({ behavior: "smooth" });
@@ -72,3 +87,7 @@ window.addEventListener("mouseout", function (e) {
     }
   }
 });
+
+menuBtn.addEventListener("click", showMenu);
+menuCloseBtn.addEventListener("click", closeMenu);
+menuOverlay.addEventListener("click", closeMenu);

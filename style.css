@@ -19,6 +19,7 @@ body {
   font-size: 10px;
   font-family: "Kalam-Regular";
   background: linear-gradient(to bottom, #fff0f6, #ffdeeb);
+  position: relative;
 }
 
 .menu-button {
@@ -30,6 +31,7 @@ body {
   background-color: #d6336c;
   padding: 8px 8px 4px;
   border-radius: 12px;
+  z-index: 2;
 }
 .menu-button:hover {
   cursor: pointer;
@@ -43,6 +45,7 @@ nav {
   color: #fff;
   align-items: center;
   margin-bottom: 7%;
+  position: relative;
 }
 .nav-link {
   border-radius: 10px;
@@ -138,6 +141,9 @@ h2.top-projects-heading {
   opacity: 0;
   transition: 1s;
 }
+.hidden-perm {
+  display: none;
+}
 
 div.other-projects-container {
   justify-content: space-around;
@@ -197,6 +203,17 @@ div.other-projects-container {
   scale: -1;
 }
 
+nav.menu {
+  display: block;
+  width: 80%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  z-index: 3;
+  padding: 7% 3% 0;
+}
+
 @media only screen and (max-width: 850px) {
   .menu-button {
     display: block;
@@ -221,6 +238,43 @@ div.other-projects-container {
     width: 10%;
     border-bottom: 1.25em #d6336c dotted;
   }
+  nav.menu {
+    width: 40%;
+    padding-top: 10%;
+  }
+  .menu-nav-link {
+    background-color: #fff;
+    color: #d6336c;
+    margin-bottom: 4%;
+    padding: 2%;
+    text-align: center;
+  }
+  .menu-nav-link:hover {
+    background-color: #d6336c;
+    color: #fff;
+  }
+}
+.menu-overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 222, 235, 0.4);
+  z-index: 1;
+  position: absolute;
+  bottom: 0;
+}
+.close-menu {
+  position: absolute;
+  top: 1.75%;
+  right: 2%;
+  color: #d6336c;
+  background-color: #fff;
+  padding: 3px 10px 0;
+  z-index: 2;
+  border-radius: 100px;
+}
+.close-menu:hover {
+  color: #fff;
+  background: #d6336c;
 }
 
 @media only screen and (max-width: 550px) {
@@ -233,5 +287,13 @@ div.other-projects-container {
   .social svg {
     width: 28px;
     height: 28px;
+  }
+  nav.menu {
+    padding: 12% 2%;
+    width: 75%;
+  }
+  .close-menu {
+    padding: 6px 6px 0;
+    top: 1.75%;
   }
 }
