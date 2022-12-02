@@ -98,11 +98,11 @@ header {
 }
 .projects-heading {
   font-size: 4.8em;
-  margin-bottom: 1%;
+  margin-bottom: 2%;
 }
 .mini-projects-description {
   font-size: 3em;
-  margin-bottom: 5%;
+  margin-bottom: 7%;
 }
 
 /* TOP Projects */
@@ -123,6 +123,7 @@ header {
 h2.top-projects-heading {
   margin-bottom: 0;
   display: inline-block;
+  color: #fff;
 }
 
 /* Projects */
@@ -133,7 +134,7 @@ h2.top-projects-heading {
 }
 .project-heading {
   font-size: 4.6em;
-  margin-bottom: 3%;
+  margin-bottom: 4%;
   text-decoration: underline;
   text-underline-offset: 6px;
 }
@@ -153,6 +154,7 @@ h2.top-projects-heading {
   font-family: cursive;
   margin-bottom: 3%;
   display: inline-block;
+  color: #fff;
 }
 
 .top-projects {
@@ -210,6 +212,7 @@ h2.top-projects-heading {
 .other-project-overlay {
   width: 80%;
   height: 200px;
+  border-radius: 5px;
 }
 .other-project-overlay {
   position: absolute;
@@ -223,6 +226,7 @@ h2.top-projects-heading {
 }
 .other-project-name {
   font-size: 2.8em;
+  margin-bottom: 8%;
 }
 .other-project a:link,
 .other-project a:visited,
@@ -239,7 +243,7 @@ h2.top-projects-heading {
   background-color: #d6336c;
 }
 .socials-heading {
-  padding: 4% 0 5%;
+  padding: 5% 0;
   color: #fff;
 }
 .social {
