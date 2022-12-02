@@ -109,7 +109,7 @@ header {
 .arrow {
   display: none;
   position: absolute;
-  color: #d6336c;
+  color: #fff;
   top: 35%;
   z-index: 1;
 }
@@ -160,6 +160,7 @@ h2.top-projects-heading {
 .top-projects {
   background-color: #d6336c;
   color: #ffdeeb;
+  padding: 4% 3% 2%;
 }
 .top-projects-container {
   display: flex;
@@ -396,13 +397,23 @@ h2.top-projects-heading {
   .top-project img,
   .top-project-overlay {
     width: 60%;
-    height: 90%;
+    height: 80%;
   }
   .arrow svg {
-    width: 24px;
-    height: 24px;
+    width: 20px;
+    height: 20px;
+  }
+  .arrow-left {
+    left: 2%;
+  }
+  .arrow-right {
+    right: 2%;
   }
   .top-project-overlay {
     margin-left: 20%;
+  }
+  .menu-button svg {
+    width: 16px;
+    height: 16px;
   }
 }
