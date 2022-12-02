@@ -35,7 +35,7 @@ function moveRight(projects) {
 }
 
 //Animation
-let projectsOptions = { rootMargin: "0px", threshold: "0.4" };
+let projectsOptions = { rootMargin: "0px", threshold: "0.1" };
 let socialOptions = { rootMargin: "0px", threshold: "1.0" };
 const socialObserver = new IntersectionObserver(socialAnimation, socialOptions);
 

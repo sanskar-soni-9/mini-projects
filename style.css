@@ -23,6 +23,7 @@ body {
   background: linear-gradient(to bottom, #fff0f6, #ffdeeb);
   position: relative;
   overflow: hidden;
+  text-align: center;
 }
 
 /* menu */
@@ -101,7 +102,7 @@ header {
 }
 .mini-projects-description {
   font-size: 3em;
-  margin-bottom: 8%;
+  margin-bottom: 5%;
 }
 
 /* TOP Projects */
@@ -119,47 +120,26 @@ header {
 .arrow:hover {
   cursor: pointer;
 }
-.projects {
-  padding: 0 2%;
-  margin-bottom: 2%;
-  transition: all 1s;
-}
 h2.top-projects-heading {
   margin-bottom: 0;
   display: inline-block;
 }
-.project-info {
-  font-size: 2.8em;
-  font-family: cursive;
-  margin-bottom: 3%;
-  display: inline-block;
-}
 
+/* Projects */
+.projects {
+  padding: 3% 2% 0;
+  margin-bottom: 2%;
+  transition: all 1s;
+}
 .project-heading {
   font-size: 4.6em;
   margin-bottom: 3%;
   text-decoration: underline;
   text-underline-offset: 6px;
 }
-
-.project-container {
-  display: flex;
-  justify-content: space-between;
-}
-.project {
-  width: 20%;
-  height: 300px;
-  position: relative;
-}
 .project-name {
   text-align: center;
   font-size: 3.2em;
-}
-.project img {
-  width: 100%;
-  height: 60%;
-  border-radius: 20px;
-  margin-bottom: 3%;
 }
 .project-description {
   width: 100%;
@@ -167,29 +147,89 @@ h2.top-projects-heading {
   font-size: 250%;
   padding: 0 2%;
 }
-.project-overlay {
+
+.project-info {
+  font-size: 2.8em;
+  font-family: cursive;
+  margin-bottom: 3%;
+  display: inline-block;
+}
+
+.top-projects {
+  background-color: #d6336c;
+  color: #ffdeeb;
+}
+.top-projects-container {
+  display: flex;
+  justify-content: space-between;
+}
+.top-project {
+  width: 20%;
+  height: 300px;
+  position: relative;
+}
+.top-project img {
   width: 100%;
   height: 60%;
-  background-color: rgba(214, 51, 108, 0.8);
+  border-radius: 20px;
+  margin-bottom: 3%;
+}
+.top-project-overlay {
+  width: 100%;
+  height: 60%;
+  background-color: rgba(255, 222, 235, 0.8);
   position: absolute;
   top: 0;
   border-radius: 20px;
   display: flex;
-  justify-content: center;
   align-items: center;
   transition: 1s;
   font-family: cursive;
 }
-.project a:link,
-.project a:visited,
-.project a:hover,
-.project a:active {
+.top-project a:link,
+.top-project a:visited,
+.top-project a:hover,
+.top-project a:active {
   text-decoration: none;
+  color: #ffdeeb;
+}
+.top-project-description {
   color: #d6336c;
 }
 
-div.other-projects-container {
-  justify-content: space-around;
+.other-projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-bottom: 7%;
+}
+.other-project {
+  position: relative;
+}
+.other-projects-container img,
+.other-project-overlay {
+  width: 80%;
+  height: 200px;
+}
+.other-project-overlay {
+  position: absolute;
+  top: 0;
+  left: 10%;
+  background-color: rgba(214, 51, 108, 0.8);
+  display: flex;
+  align-items: center;
+  font-family: cursive;
+  transition: all 1s;
+}
+.other-project-name {
+  font-size: 2.8em;
+}
+.other-project a:link,
+.other-project a:visited,
+.other-project a:hover,
+.other-project a:active {
+  text-decoration: none;
+  color: #d6336c;
 }
 
 .socials-section {
@@ -274,7 +314,7 @@ div.other-projects-container {
   .project-container {
     position: relative;
   }
-  .project {
+  .top-project {
     flex: 100% 0 0;
     width: 100%;
     height: 250px;
@@ -290,13 +330,13 @@ div.other-projects-container {
   .arrow-right {
     right: 1%;
   }
-  .project img,
-  .project-overlay {
+  .top-project img,
+  .top-project-overlay {
     width: 50%;
     height: 80%;
     margin: 0 auto 1%;
   }
-  .project-overlay {
+  .top-project-overlay {
     margin-left: 25%;
   }
   body {
@@ -331,7 +371,7 @@ div.other-projects-container {
   body {
     font-size: 4px;
   }
-  .project {
+  .top-project {
     height: 150px;
   }
   .project-heading {
@@ -349,11 +389,8 @@ div.other-projects-container {
     padding: 6px 6px 0;
     top: 1.75%;
   }
-  .menu-button {
-    /* top: 5px; */
-  }
-  .project img,
-  .project-overlay {
+  .top-project img,
+  .top-project-overlay {
     width: 60%;
     height: 90%;
   }
@@ -361,7 +398,7 @@ div.other-projects-container {
     width: 24px;
     height: 24px;
   }
-  .project-overlay {
+  .top-project-overlay {
     margin-left: 20%;
   }
 }
