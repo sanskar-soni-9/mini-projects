@@ -13,6 +13,7 @@ const arrowRightBtn = document.querySelector(".arrow-right");
 const topProjects = document.querySelectorAll(".top-project");
 const codedamnProjects = document.querySelectorAll(".codedamn-project");
 const otherProjects = document.querySelectorAll(".other-project");
+const dots = document.querySelectorAll(".dots");
 
 //Menu
 function showMenu() {
@@ -27,11 +28,25 @@ function closeMenu() {
 }
 
 //Mobile arrow buttons function
-function moveLeft(projects) {
-  console.log("--Under Construction--");
+let curPositions = [];
+for (let i = 0; i < topProjects.length; i++) {
+  topProjects[i].style.transform = `translateX(${i * 100}%)`;
+  curPositions.push(i * 100);
 }
-function moveRight(projects) {
-  console.log("--Under Construction--");
+
+function topProjectsSlider(num) {
+  for (let i = 0; i < topProjects.length; i++) {
+    console.log("hi");
+    curPositions[i] = curPositions[i] + num * 100;
+    topProjects[i].style.transform = `translateX(${curPositions[i]}%)`;
+    console.log(curPositions[i] + num * 100);
+  }
+}
+function moveLeft() {
+  topProjectsSlider(-1);
+}
+function moveRight() {
+  topProjectsSlider(1);
 }
 
 //Animation
