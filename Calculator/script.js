@@ -17,6 +17,13 @@ const createExpression = function (key) {
     displayField.value = expression;
     return;
   }
+  if (
+    expression.length > 1 &&
+    (key === "/" || key === "*") &&
+    (expression.charAt(expression.length - 1) === "/" ||
+      expression.charAt(expression.length - 1) === "*")
+  )
+    key = `1${key}`;
   if (key === "=") {
     if (!expression) return;
     displayField.value = eval(expression); //calculate using eval()

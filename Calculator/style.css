@@ -51,14 +51,9 @@ main {
   height: 100%;
   background-color: inherit;
   border: none;
-  /* caret-color: transparent; */
   color: #fff;
   font-size: 1.6em;
   text-align: center;
-}
-.display-content input:focus {
-  outline: none;
-  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .functions {
