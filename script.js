@@ -13,7 +13,8 @@ const arrowRightBtn = document.querySelector(".arrow-right");
 const topProjects = document.querySelectorAll(".top-project");
 const codedamnProjects = document.querySelectorAll(".codedamn-project");
 const otherProjects = document.querySelectorAll(".other-project");
-const dots = document.querySelectorAll(".dots");
+const dots = document.querySelectorAll(".dot");
+const dotsContainer = document.querySelector(".dots-container");
 
 //Menu
 function showMenu() {
@@ -29,24 +30,38 @@ function closeMenu() {
 
 //Mobile arrow buttons function
 let curPositions = [];
-for (let i = 0; i < topProjects.length; i++) {
-  topProjects[i].style.transform = `translateX(${i * 100}%)`;
-  curPositions.push(i * 100);
+const opac = window.getComputedStyle(dotsContainer).getPropertyValue("opacity");
+function resetSlider() {
+  if (opac !== "0") {
+    for (let i = 0; i < topProjects.length; i++) {
+      topProjects[i].style.transform = `translateX(${i * 100}%)`;
+      curPositions.push(i * 100);
+      dots[i].classList.remove("active-dot");
+      dots[0].classList.add("active-dot");
+    }
+  }
 }
+resetSlider();
 
 function topProjectsSlider(num) {
   for (let i = 0; i < topProjects.length; i++) {
-    console.log("hi");
     curPositions[i] = curPositions[i] + num * 100;
     topProjects[i].style.transform = `translateX(${curPositions[i]}%)`;
-    console.log(curPositions[i] + num * 100);
+    dots[i].classList.remove("active-dot");
+    if (curPositions[i] === 0) dots[i].classList.add("active-dot");
   }
 }
 function moveLeft() {
-  topProjectsSlider(-1);
+  if (curPositions[curPositions.length - 1] === 0) {
+    curPositions = [];
+    resetSlider();
+  } else topProjectsSlider(-1);
 }
 function moveRight() {
-  topProjectsSlider(1);
+  if (curPositions[0] === 0) {
+    curPositions = [-200, -100, 0, 100];
+    topProjectsSlider(-1);
+  } else topProjectsSlider(1);
 }
 
 //Animation
@@ -122,5 +137,6 @@ window.addEventListener("mouseout", function (e) {
   }
 });
 
+//Arrow
 arrowLeftBtn.addEventListener("click", moveRight);
 arrowRightBtn.addEventListener("click", moveLeft);
