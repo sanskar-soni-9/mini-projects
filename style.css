@@ -202,6 +202,16 @@ h2.top-projects-heading {
   color: #d6336c;
 }
 
+.pig-game {
+  transform: translateX(100%);
+}
+.drum-kit {
+  transform: translateX(200%);
+}
+.guess-the-number {
+  transform: translateX(300%);
+}
+
 .other-projects {
   transition: all 2s;
 }
