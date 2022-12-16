@@ -202,16 +202,6 @@ h2.top-projects-heading {
   color: #d6336c;
 }
 
-.pig-game {
-  transform: translateX(100%);
-}
-.drum-kit {
-  transform: translateX(200%);
-}
-.guess-the-number {
-  transform: translateX(300%);
-}
-
 .other-projects {
   transition: all 2s;
 }
@@ -294,7 +284,7 @@ h2.top-projects-heading {
   scale: -1;
 }
 .intersection-animation {
-  transform: translateY(100px);
+  transform: translateY(100%);
   opacity: 0;
 }
 
@@ -389,6 +379,15 @@ h2.top-projects-heading {
   }
   .dots-container {
     opacity: 1;
+  }
+  .pig-game {
+    transform: translateX(100%);
+  }
+  .drum-kit {
+    transform: translateX(200%);
+  }
+  .guess-the-number {
+    transform: translateX(300%);
   }
   .social svg {
     width: 32px;

@@ -4,6 +4,7 @@ const projectsOverlay = document.querySelectorAll(".project-overlay");
 const navBar = document.querySelector("nav");
 const navLinks = document.querySelectorAll(".nav-link");
 const projectContainers = document.querySelectorAll(".projects");
+const projects = document.querySelectorAll(".project");
 const socials = document.querySelectorAll(".social");
 const menuBtn = document.querySelector(".menu-button svg");
 const menuOverlay = document.querySelector(".menu-overlay");
@@ -54,10 +55,10 @@ function moveRight() {
 }
 
 //Animation
-let projectsOptions = { rootMargin: "0px", threshold: "0.1" };
+let projectsOptions = { rootMargin: "200px", threshold: "0.1" };
 let socialOptions = { rootMargin: "0px", threshold: "1.0" };
-const socialObserver = new IntersectionObserver(socialAnimation, socialOptions);
 
+const socialObserver = new IntersectionObserver(socialAnimation, socialOptions);
 const projectObserver = new IntersectionObserver(
   projectObserverCallBack,
   projectsOptions
@@ -87,7 +88,7 @@ socials.forEach((i) => {
   }
 });
 
-projectContainers.forEach((i) => {
+projects.forEach((i) => {
   if (i) {
     projectObserver.observe(i);
   }
