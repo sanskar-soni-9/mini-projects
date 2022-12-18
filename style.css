@@ -213,6 +213,7 @@ h2.top-projects-heading {
 }
 .other-project {
   position: relative;
+  transition: 1s;
 }
 .other-projects-container img,
 .other-project-overlay {

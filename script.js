@@ -56,7 +56,7 @@ function moveRight() {
 
 //Animation
 otherProjects.forEach(
-  (element, key) => (element.style.transition = `${(key + 1) * 0.3}s`)
+  (element, key) => (element.style.transitionDelay = `${key / 10 + 0.2}s`)
 );
 let projectsOptions = { rootMargin: "200px", threshold: "0.1" };
 let socialOptions = { rootMargin: "0px", threshold: "1.0" };
