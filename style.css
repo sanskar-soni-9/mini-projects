@@ -7,6 +7,14 @@
   src: url(assets/fonts/Nunito-Italic-VariableFont_wght.ttf);
 }
 
+:root {
+  --primary-color: #d6336c;
+  --secondary-color: #ffdeeb;
+  --white: #fff;
+  --top-project-overlay: rgba(255, 222, 235, 0.8);
+  --other-project-overlay: rgba(214, 51, 108, 0.8);
+}
+
 html {
   overflow-x: hidden;
 }
@@ -17,10 +25,10 @@ html {
 }
 body {
   box-sizing: border-box;
-  color: #d6336c;
+  color: var(--primary-color);
   font-size: 10px;
   font-family: "Kalam-Regular";
-  background: linear-gradient(to bottom, #fff0f6, #ffdeeb);
+  background: linear-gradient(to bottom, var(--white), var(--secondary-color));
   position: relative;
   overflow: hidden;
   text-align: center;
@@ -32,8 +40,8 @@ body {
   position: absolute;
   top: 0.5%;
   right: 3%;
-  color: #fff;
-  background-color: #d6336c;
+  color: var(--white);
+  background-color: var(--primary-color);
   padding: 8px 8px 4px;
   border-radius: 12px;
   z-index: 2;
@@ -44,9 +52,9 @@ body {
 nav {
   display: flex;
   font-size: 3em;
-  background-color: #d6336c;
+  background-color: var(--primary-color);
   justify-content: space-around;
-  color: #fff;
+  color: var(--white);
   align-items: center;
   margin-bottom: 7%;
   position: relative;
@@ -82,15 +90,15 @@ nav.menu {
   position: absolute;
   top: 1%;
   right: 2%;
-  color: #d6336c;
-  background-color: #fff;
+  color: var(--primary-color);
+  background-color: var(--white);
   padding: 5px 10px 0;
   z-index: 2;
   border-radius: 12px;
 }
 .close-menu:hover {
-  color: #fff;
-  background: #d6336c;
+  color: var(--white);
+  background: var(--primary-color);
 }
 
 /* header */
@@ -110,7 +118,7 @@ header {
 .arrow {
   display: none;
   position: absolute;
-  color: #fff;
+  color: var(--white);
   top: 35%;
   z-index: 1;
 }
@@ -124,7 +132,7 @@ header {
 h2.top-projects-heading {
   margin-bottom: 0;
   display: inline-block;
-  color: #fff;
+  color: var(--white);
 }
 
 /* Projects */
@@ -145,7 +153,7 @@ h2.top-projects-heading {
 }
 .project-description {
   width: 100%;
-  color: #fff;
+  color: var(--white);
   font-size: 250%;
   padding: 0 2%;
 }
@@ -155,12 +163,12 @@ h2.top-projects-heading {
   font-family: cursive;
   margin-bottom: 3%;
   display: inline-block;
-  color: #fff;
+  color: var(--white);
 }
 
 .top-projects {
-  background-color: #d6336c;
-  color: #ffdeeb;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
   padding: 4% 3% 0;
 }
 .top-projects-container {
@@ -182,7 +190,7 @@ h2.top-projects-heading {
 .top-project-overlay {
   width: 100%;
   height: 60%;
-  background-color: rgba(255, 222, 235, 0.8);
+  background-color: var(--top-project-overlay);
   position: absolute;
   top: 0;
   border-radius: 20px;
@@ -196,10 +204,10 @@ h2.top-projects-heading {
 .top-project a:hover,
 .top-project a:active {
   text-decoration: none;
-  color: #ffdeeb;
+  color: var(--secondary-color);
 }
 .top-project-description {
-  color: #d6336c;
+  color: var(--primary-color);
 }
 
 .other-projects {
@@ -225,7 +233,7 @@ h2.top-projects-heading {
   position: absolute;
   top: 0;
   left: 10%;
-  background-color: rgba(214, 51, 108, 0.8);
+  background-color: var(--other-project-overlay);
   display: flex;
   align-items: center;
   font-family: cursive;
@@ -240,18 +248,18 @@ h2.top-projects-heading {
 .other-project a:hover,
 .other-project a:active {
   text-decoration: none;
-  color: #d6336c;
+  color: var(--primary-color);
 }
 
 .socials-section {
   width: 100%;
   text-align: center;
   font-size: 3em;
-  background-color: #d6336c;
+  background-color: var(--primary-color);
 }
 .socials-heading {
   padding: 5% 0;
-  color: #fff;
+  color: var(--white);
 }
 .social {
   transition: all 1s;
@@ -266,7 +274,7 @@ h2.top-projects-heading {
 .social a:visited,
 .social a:active {
   text-decoration: none;
-  color: #fff;
+  color: var(--white);
 }
 .social svg {
   width: 48px;
@@ -274,7 +282,7 @@ h2.top-projects-heading {
 }
 
 .social a:hover svg {
-  border: 0.09em #fff solid;
+  border: 0.09em var(--white) solid;
   border-radius: 10px;
   scale: 1.25;
   padding: 8%;
@@ -299,7 +307,7 @@ h2.top-projects-heading {
 /* .devider {
   width: 5%;
   height: 0.1em;
-  border-bottom: 1.75em #d6336c dotted;
+  border-bottom: 1.75em var(--primary-color) dotted;
   margin: 0 auto 5%;
 } */
 
@@ -314,7 +322,7 @@ h2.top-projects-heading {
   border-radius: 100px;
 }
 .active-dot {
-  border-color: #ffdeeb;
+  border-color: var(--secondary-color);
 }
 
 /* Media query */
@@ -396,22 +404,22 @@ h2.top-projects-heading {
   }
   /* .devider {
     width: 10%;
-    border-bottom: 1.25em #d6336c dotted;
+    border-bottom: 1.25em var(--primary-color) dotted;
   } */
   nav.menu {
     width: 40%;
     padding-top: 6%;
   }
   .menu-nav-link {
-    background-color: #fff;
-    color: #d6336c;
+    background-color: var(--white);
+    color: var(--primary-color);
     margin-bottom: 4%;
     padding: 2%;
     text-align: center;
   }
   .menu-nav-link:hover {
-    background-color: #d6336c;
-    color: #fff;
+    background-color: var(--primary-color);
+    color: var(--white);
   }
 }
 
@@ -456,7 +464,7 @@ h2.top-projects-heading {
     border: 4px solid rgba(255, 222, 235, 0.5);
   }
   .active-dot {
-    border-color: #ffdeeb;
+    border-color: var(--secondary-color);
   }
   .arrow svg {
     width: 28px;
