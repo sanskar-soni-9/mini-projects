@@ -26,8 +26,9 @@ const createExpression = function (key) {
     key = `1${key}`;
   if (key === "=") {
     if (!expression) return;
-    displayField.value = eval(expression); //calculate using eval()
-    expression = "";
+    const answer = eval(expression);
+    displayField.value = answer; //calculate using eval()
+    expression = answer;
     return;
   }
   expression += key;
