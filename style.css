@@ -389,13 +389,13 @@ h2.top-projects-heading {
   .dots-container {
     opacity: 1;
   }
-  .pig-game {
+  .top-project-2 {
     transform: translateX(100%);
   }
-  .drum-kit {
+  .top-project-3 {
     transform: translateX(200%);
   }
-  .guess-the-number {
+  .top-project-4 {
     transform: translateX(300%);
   }
   .social svg {
