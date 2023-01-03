@@ -23,14 +23,14 @@ body {
 
 .title {
   padding-top: 3%;
-  margin-bottom: 5%;
+  margin-bottom: 3%;
 }
 
 .game-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
-  margin-bottom: 5%;
+  margin-bottom: 4%;
 }
 
 .tile {
@@ -44,25 +44,25 @@ body {
   cursor: pointer;
 }
 
-.tile-red {
+.tile-1 {
   background: var(--red-color);
   box-shadow: 0 0 0 1px #f25022 inset, 0 0 0 2px rgb(255 255 255 / 15%) inset,
     0 8px 0 0 #c93a12, 0 8px 0 1px rgb(0 0 0 / 40%),
     0 8px 8px 1px rgb(0 0 0 / 50%);
 }
-.tile-green {
+.tile-2 {
   background: var(--green-color);
   box-shadow: 0 0 0 1px #7fba00 inset, 0 0 0 2px rgb(255 255 255 / 15%) inset,
     0 8px 0 0 #638f05, 0 8px 0 1px rgb(0 0 0 / 40%),
     0 8px 8px 1px rgb(0 0 0 / 50%);
 }
-.tile-blue {
+.tile-3 {
   background: var(--blue-color);
   box-shadow: 0 0 0 1px #00a4ef inset, 0 0 0 2px rgb(255 255 255 / 15%) inset,
     0 8px 0 0 #0883bc, 0 8px 0 1px rgb(0 0 0 / 40%),
     0 8px 8px 1px rgb(0 0 0 / 50%);
 }
-.tile-yellow {
+.tile-4 {
   background: var(--yellow-color);
   box-shadow: 0 0 0 1px #ffb900 inset, 0 0 0 2px rgb(255 255 255 / 15%) inset,
     0 8px 0 0 #c28e07, 0 8px 0 1px rgb(0 0 0 / 40%),
@@ -72,18 +72,35 @@ body {
   box-shadow: none;
 }
 
+.description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .btn-start {
   text-transform: uppercase;
   letter-spacing: 4px;
   text-align: center;
-  padding: 8% 10%;
+  padding: 4% 4%;
   width: 85px;
   font-weight: 600;
 }
 .status {
   text-transform: uppercase;
+  text-align: center;
+}
+.game-description {
+  text-align: center;
 }
 
 .hidden {
   display: none;
+}
+
+@media only screen and (max-width: 400px) {
+  .tile {
+    width: 120px;
+    height: 120px;
+  }
 }

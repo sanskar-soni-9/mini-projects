@@ -5,20 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Simon Game</title>
-    <link rel="stylesheet" href="src/style.css" />
-    <script src="src/script.js" defer></script>
+    <link rel="stylesheet" href="src/css/style.css" />
+    <script type="module" src="src/js/script.js" defer></script>
+    <link rel="shortcut icon" href="#" />
+    <audio id="sound1" src="src/sounds/red.mp3"></audio>
+    <audio id="sound2" src="src/sounds/green.mp3"></audio>
+    <audio id="sound3" src="src/sounds/blue.mp3"></audio>
+    <audio id="sound4" src="src/sounds/yellow.mp3"></audio>
+    <audio id="wrong" src="src/sounds/wrong.mp3"></audio>
   </head>
   <body>
     <h1 class="title">Simon Game</h1>
     <div class="game-container">
-      <div class="tile tile-red"></div>
-      <div class="tile tile-green"></div>
-      <div class="tile tile-blue"></div>
-      <div class="tile tile-yellow"></div>
+      <div class="tile tile-1" data-sound="sound1"></div>
+      <div class="tile tile-2" data-sound="sound2"></div>
+      <div class="tile tile-3" data-sound="sound3"></div>
+      <div class="tile tile-4" data-sound="sound4"></div>
     </div>
     <div class="description">
       <button class="btn-start">start</button>
       <h2 class="status hidden"></h2>
+      <p class="game-description">(Repeat after the computer.)</p>
     </div>
   </body>
 </html>
